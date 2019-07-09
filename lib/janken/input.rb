@@ -6,42 +6,15 @@ module OnePlayer
   def auto
     pattern = ["rock","scissor","paper"]
     select = pattern[rand(0..2)]
-    self.write_save(select)
-    select
-  end
-
-  def write_save(save)
-    self.delete
-    File.open("./lib/janken/save_auto.txt", "w") do |f|
-      f.puts(save)
-    end
-  end
-
-  def read_save
-    data = "./lib/janken/save_auto.txt"
-    if File.file?(data)
-      File.open("./lib/janken/save_auto.txt", "r") do |f|
-        f.read.chomp
-      end
-    else
-      "セーブデータが有りません"
-    end
-  end
-  
-  def delete
-    data="./lib/janken/save_auto.txt"
-    if File.file?(data)
-      File.unlink data
-    end
   end
 
   def janken(input)
-    Janken.judge(self.auto,input,"CPU","あなた")
+    output = Array.new
+    pattern = self.auto
+    output << pattern
+    output << Janken.judge(pattern,input,"CPU","あなた")
   end
 
   module_function :auto
-  module_function :write_save
-  module_function :delete
-  module_function :read_save
   module_function :janken
 end
