@@ -1,6 +1,6 @@
 require "./janken.rb"
 
-class OnePlayer #< Janken
+module OnePlayer #< Janken
   include Janken
 
   def auto
@@ -36,6 +36,12 @@ class OnePlayer #< Janken
   end
 
   def janken(input)
-    self.judge(self.auto,input,"CPU","あなた")
+    Janken.judge(self.auto,input,"CPU","あなた")
   end
+
+  module_function :auto
+  module_function :write_save
+  module_function :delete
+  module_function :read_save
+  module_function :janken
 end

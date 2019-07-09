@@ -1,4 +1,4 @@
-#require "janken/version"
+require "janken/version"
 
 module Janken
   class Error < StandardError; end
@@ -22,4 +22,6 @@ module Janken
       puts "rock,scissor,paperのいずれかを入力してください"
     end
   end
+  
+  module_function :judge
 end
