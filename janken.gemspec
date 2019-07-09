@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{janken program.}
   spec.description   = %q{can play janken.}
-  spec.homepage      = "github.com/KKZoo/Janken"
+  spec.homepage      = "https://github.com/KKZoo/Janken"
   spec.license       = "MIT"
 
   # Specify which files should be added to the gem when it is released.
