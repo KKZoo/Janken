@@ -52,12 +52,7 @@ OnePlayer.janken("Pattern")
 
 ```ruby
 OnePlayer.janken("rock")
-```
-
-Well, if you want to know that "pattern" CPU is out, write the following command after the above command.
-
-```ruby
-OnePlayer.read_save
+# => ["CPU-Pattern","BattleResult"]
 ```
 
 ## Development
