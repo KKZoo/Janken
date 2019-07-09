@@ -12,15 +12,15 @@ module OnePlayer
 
   def write_save(save)
     self.delete
-    File.open("./save_auto.txt", "w") do |f|
+    File.open("./lib/janken/save_auto.txt", "w") do |f|
       f.puts(save)
     end
   end
 
   def read_save
-    data = "./save_auto.txt"
+    data = "./lib/janken/save_auto.txt"
     if File.file?(data)
-      File.open("./save_auto.txt", "r") do |f|
+      File.open("./lib/janken/save_auto.txt", "r") do |f|
         f.read.chomp
       end
     else
@@ -29,7 +29,7 @@ module OnePlayer
   end
   
   def delete
-    data="./save_auto.txt"
+    data="./lib/janken/save_auto.txt"
     if File.file?(data)
       File.unlink data
     end

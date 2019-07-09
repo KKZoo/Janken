@@ -1,8 +1,7 @@
 # Janken
+This is a gem for playing rock-paper-scissors.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/janken`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-Delete this and the text above, and describe your gem
+※The output is in Japanese.
 
 ## Installation
 
@@ -22,7 +21,44 @@ Or install it yourself as:
 
 ## Usage
 
-Write usage instructions here
+### Standard operation of rock-paper-scissors.
+
+```ruby
+require "janken"
+
+Janken.judge("PatternA","PatternB","PlayerNameA","PlayerNameB")
+```
+
+`Pattrern` can be input as `rock`,`sissior`,`paper`.
+
+**Example**
+
+```ruby
+Janken.judge("rock","rock","Hanako","Taro")
+# output => "あいこ"
+```
+
+### Play alone mode.
+
+```ruby
+require "janken"
+
+OnePlayer.janken("Pattern")
+```
+
+`Pattern` can be input as `rock`,`sissior`,`paper`.
+
+**Example**
+
+```ruby
+OnePlayer.janken("rock")
+```
+
+Well, if you want to know that "pattern" CPU is out, write the following command after the above command.
+
+```ruby
+OnePlayer.read_save
+```
 
 ## Development
 
