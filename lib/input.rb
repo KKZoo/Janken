@@ -36,7 +36,6 @@ class OnePlayer #< Janken
   end
 
   def janken(input)
-    janken = Janken.new
-    janken.judge(self.auto,input,"CPU","あなた")
+    self.judge(self.auto,input,"CPU","あなた")
   end
 end
