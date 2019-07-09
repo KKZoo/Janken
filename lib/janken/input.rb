@@ -1,4 +1,4 @@
-require "./janken.rb"
+require "janken"
 
 module OnePlayer
   include Janken
@@ -11,7 +11,7 @@ module OnePlayer
   end
 
   def write_save(save)
-    self.delete("./save_auto.txt")
+    self.delete
     File.open("./save_auto.txt", "w") do |f|
       f.puts(save)
     end
@@ -21,15 +21,15 @@ module OnePlayer
     data = "./save_auto.txt"
     if File.file?(data)
       File.open("./save_auto.txt", "r") do |f|
-        puts f.read
+        f.read.chomp
       end
     else
-      puts "セーブデータが有りません"
+      "セーブデータが有りません"
     end
   end
   
-  def delete(file_name)
-    data="#{file_name}"
+  def delete
+    data="./save_auto.txt"
     if File.file?(data)
       File.unlink data
     end
