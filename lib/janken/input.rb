@@ -1,6 +1,6 @@
 require "./janken.rb"
 
-module OnePlayer #< Janken
+module OnePlayer
   include Janken
 
   def auto
