@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module Janken
   class Error < StandardError; end
-  
-  def judge(input_a,input_b, player_a, player_b)
+
+  module_function def judge(input_a, input_b, player_a, player_b)
     if input_a == input_b
       "あいこ"
     elsif input_a == "rock" && input_b == "scissor"
@@ -20,6 +22,4 @@ module Janken
       "rock,scissor,paperのいずれかを入力してください"
     end
   end
-  
-  module_function :judge
 end
