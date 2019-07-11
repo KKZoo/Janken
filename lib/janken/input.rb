@@ -5,9 +5,9 @@ require "janken"
 module OnePlayer
   include Janken
 
-  module_function def auto
-    pattern = %w[rock scissor paper]
-    select = pattern[rand(0..2)]
+  def auto
+    pattern = ["rock","scissor","paper"]
+    pick = pattern[rand(0..2)]
   end
 
   module_function def janken(input)
