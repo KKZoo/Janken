@@ -5,7 +5,7 @@ module OnePlayer
 
   def auto
     pattern = ["rock","scissor","paper"]
-    select = pattern[rand(0..2)]
+    pick = pattern[rand(0..2)]
   end
 
   def janken(input)
