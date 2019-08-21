@@ -29,7 +29,7 @@ require "janken"
 Janken.judge("PatternA","PatternB","PlayerNameA","PlayerNameB")
 ```
 
-`Pattrern` can be input as `rock`,`sissior`,`paper`.
+`Pattrern` can be input as `rock`,`scissor`,`paper`.
 
 **Example**
 
@@ -46,7 +46,7 @@ require "janken"
 OnePlayer.janken("Pattern")
 ```
 
-`Pattern` can be input as `rock`,`sissior`,`paper`.
+`Pattern` can be input as `rock`,`scissor`,`paper`.
 
 **Example**
 
